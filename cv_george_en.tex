@@ -1,0 +1,185 @@
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+%\usepackage[spanish]{babel}
+%  \selectlanguage{english}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+%\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[sc,osf]{mathpazo}
+\usepackage[scaled]{uarial}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+%\usepackage[T1]{fontenc}
+
+% Set your name here
+\def\name{George G. Vega}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{http://cl.linkedin.com/in/georgevegayon}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 9in},
+  left=1.0in,
+  top=1.25in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+%\usepackage{sectsty}
+%\sectionfont{\sffamily\mdseries\Large}
+%\subsectionfont{\sffamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% rmfamily
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{0.45cm}
+  }
+}{
+  \end{list}
+}
+
+% Para poder poner comandos genericos en tablas (en el inicio del argumento)
+\usepackage{array}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.25in}
+
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{>{\bfseries}p{4cm}l}
+    Mobile & +56 (9) 7 647 2552 \\
+    e-mail & \href{mailto:g.vegayon@gmail.com}{\tt g.vegayon@gmail.com} \\
+    website & \href{http://cl.linkedin.com/in/georgevegayon}{\tt http://cl.linkedin.com/in/georgevegayon} \\
+  \end{tabular}
+\end{minipage}
+
+\section*{Personal Information}
+
+\begin{minipage}{0.45\linewidth}
+  \begin{tabular}{>{\bfseries}p{4cm}l}
+  Date of birth & 2 de marzo de 1988.\\
+  Country of birth & Chileno\\
+  Marital status  & Married\\
+  Location & Santiago, Región Metropolitana, Chile.
+  \end{tabular}
+\end{minipage}
+
+
+\section*{Education}
+
+\begin{itemize}
+\item Magíster en Economía y Políticas Públicas, Universidad Adolfo Ibáñez (2010) \\
+Ingeniería Comercial, Universidad Adolfo Ibáñez (2010) \\
+Minor en Cs. Políticas, Universidad Adolfo Ibáñez (2009)
+\end{itemize}
+
+\section*{Work Experience}
+
+\begin{itemize}
+\item \textbf{Chilean Pension Supervisor, 2011--Today} \emph{Research Analyst} at the Research Division.
+\item \textbf{Nodos Chile Social Network Analysis Ltda., 2012--Today} \emph{Partner} of SNA Consulting Entrepreneurship.
+\item \textbf{Adolfo Ibáñez University, 2011--2012.} \emph{Adjunct Professor} of Economics at the School of Government.
+\item \textbf{Adolfo Ibáñez University, 2012.} \emph{Adjunct Professor} of Statistical computing at School of Government.
+\item \textbf{Chilean Ministry of Social Planning, 2011.} \emph{Analyst} of Social Programs coordinating IT Projects and in charge of the Open Data Initiative at the Ministry.
+\end{itemize}
+
+\section*{Research}
+\subsection*{Software}
+\begin{itemize}
+\item ``PARALLEL: Stata module for Parallel Computing'' en {\it Statistical Software Components, Boston College Department of Economics}, 2012
+\item ``rgexf: An R package to build gexf graph files'' en {\it Comprehensive R Archive Network}, 2012
+\item ``googlePublicData: An R package to build Google's Public Data Explorer DSPL Metadata files'' en {\it Comprehensive R Archive Network}, 2012
+\item ``CUENTACOT: Stata module for Contributions Counting'' en {\it Statistical Software Components, Boston College Department of Economics}, 2011
+\item ``MOVAVG: MATA based Moving Average generator'' en {\it Statistical Software Components, Boston College Department of Economics}, 2012
+\item ``DOPARSER: Look for dta-files used in do-files|ado-files (plain-text)'' en {\it Statistical Software Components, Boston College Department of Economics}, 2012
+\end{itemize}
+
+\subsection*{Working papers}
+\begin{itemize}
+\item {\bf George Vega}, Eric Melse, 2013. ``PARALLEL: multicore computing in Stata'', Working Paper.
+\item Ximena Quintanilla, Isabel Poblete, {\bf George Vega}, 2013. ``Estudio Actuarial de los Fondos del Seguro de Cesant\'ia'', Working Paper N 56, {\it Chilean Pension Supervisor}
+\item ``Discarding variables: A practical application of Jolliffe's (1972) B2 algorithm for subset selection using Principal Components Analysis'' en {\it Superintendencia de Pensiones}.
+\item ``PIB Académico: Dinámicas de la colaboración académica en Chile'' en {\it Universidad Adolfo Ibáñez}
+\item ``Formación de la Opinión Pública en los Medios Sociales'' en {\it Universidad Adolfo Ibáñez}.
+\end{itemize}
+
+\subsection*{Others}
+
+\begin{itemize}
+\item
+\href{https://gephi.org/2013/rgexf-an-r-library-to-work-with-gexf-graph-files/}{``rgexf: An R library to work with GEXF graph files''} in {\it Gephi Blog}, published in february 12, 2013.
+\item \href{http://www.elmostrador.cl/opinion/2012/04/04/aborto-en-twitter-un-debate-a-medias/}{``Aborto en Twitter: un debate a medias''} in {\it El Mostrador}, published in april 4, 2012.
+\item \href{http://www.uai.cl/200911165701/columna-de-opinion/columnas-opinion/reinventar-la-ciudadania-la-otra-campana-que-obama-esta-ganando}{``Reinventar la ciudadanía, la otra campaña que Obama está ganando''} in {\it El Mostrador}, published in november 10, 2009.
+\end{itemize}
+
+\section*{Honours and Awards}
+
+\begin{itemize}
+\item \textbf{Ad hoc reviewer} (parallel computing) of the Official Journal of The Society for Computational Economics (January 2013).
+\item \textbf{Founder of the R Users Group in Chile} Starting in january 2013.
+\item \textbf{Honorable Mention} (Posters Sesion. Work: \emph{Introducing Parallel: Stata Module for Parallel Computing}) given by the Chilean Economics Society during its 2012 annual meetting.
+\item \textbf{Honour Scholarship} given by Adolfo Ib\'a\~nez University during undergrad and grad studies (2006-2010).
+\item \textbf{Project ``Educación Joven'', 2008--2009.} \emph{Director and co-founder} of the social education program
+ which, with a team of twenty volunteers, worked with 100 social risk students towards helping them to get into college.
+\item \textbf{Software workshop, 2010.} \emph{Co-founder} of the workshop thaught by Economics and PP Masters's Students at Adolfo Ib\'a\~nez University in order to introduce grad students into scholar research software (\LaTeX, \emph{R}, Stata, etc.).
+\end{itemize}
+
+\bigskip
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    last update: \today \\
+    \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+\end{document}
