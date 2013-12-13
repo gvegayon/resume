@@ -1,0 +1,119 @@
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+%\usepackage[spanish]{babel}
+%  \selectlanguage{english}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+%\usepackage[T1]{fontenc}
+\usepackage[sc,osf]{mathpazo}
+%\usepackage[scaled]{uarial}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+%\usepackage[T1]{fontenc}
+
+% Set your name here
+\def\name{George G. Vega}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{http://www.ggvega.com}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+%  body={6.5in, 9in},
+  left=1.3cm,
+  top=1in,
+  right=1.3cm,
+  bottom=1in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+%\usepackage{sectsty}
+%\sectionfont{\sffamily\mdseries\Large}
+%\subsectionfont{\sffamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% rmfamily
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{0.45cm}
+  }
+}{
+  \end{list}
+}
+
+% Para poder poner comandos genericos en tablas (en el inicio del argumento)
+\usepackage{array}
+
+\begin{document}
+
+% Place name at left
+{\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\section*{Honours and Professional Achievements}
+
+\begin{itemize}
+\item \textbf{Ad hoc reviewer} (parallel computing) of the Official Journal of The Society for Computational Economics (January 2013).
+\item \textbf{Book reviewer} ``Network Graph Analysis and Visualization with Gephi'', by Ken Cherven, Packt Publishing, 2013.
+\item \textbf{Founder of the R Users Group in Chile} Starting in January 2013.
+\item \textbf{Honorable Mention} (Posters Sesion. Work: \emph{Introducing Parallel: Stata Module for Parallel Computing}) given by the Chilean Economics Society during its 2012 annual meetting.
+\item \textbf{Honour Scholarship} given by Adolfo Ib\'a\~nez University for completing undergrad and graduate studies (2006-2010).
+\item \textbf{Director and co-founder of the Project ``Educaci\'on Joven'', 2008--2009.} A program in remedial education
+ dedicated to assist low income students on reaching Higher Education.
+%\item \textbf{Software workshop, 2010.} \emph{Co-founder} of the workshop thaught by Economics and PP Masters's Students at Adolfo Ib\'a\~nez University in order to introduce grad students into scholar research software (\LaTeX, \emph{R}, Stata, etc.).
+\end{itemize}
+
+%\bigskip
+
+% Footer
+%\begin{center}
+%  \begin{footnotesize}
+%    last update: \today \\
+%    \href{\footerlink}{\texttt{\footerlink}}
+%  \end{footnotesize}
+%\end{center}
+
+\end{document}
+
