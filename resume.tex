@@ -12,7 +12,7 @@
 
 \usepackage{hyperref}
 \usepackage{geometry}
-\usepackage[minbibnames=3,sorting=ydnt]{biblatex}
+\usepackage[minbibnames=3,sorting=ydnt,date=comp,isbn=false,doi=false]{biblatex}
 \addbibresource{papers.bib}
 
 
@@ -87,37 +87,41 @@
 \begin{document}
 
 % Place name at left
-{\huge \name}
+\part*{\name}
 
 % Alternatively, print name centered and bold:
 %\centerline{\huge \bf \name}
 
-\vspace{0.25in}
+%\vspace{0.25in}
 
-\begin{minipage}{0.45\linewidth}
-  \begin{tabular}{>{\bfseries}p{4cm}l}
-    Mobile & +1 (626) 381 8171 \\
+\begin{minipage}{0.50\linewidth}
+  \begin{tabular}{>{\bfseries}p{.2\linewidth}p{.79\linewidth}}
+    Mobile & +1 (six two six) 381 8171 \\
     e-mail & \href{mailto:g.vegayon@gmail.com}{\tt g.vegayon@gmail.com} \\
-    website & \href{https://ggvy.cl}{\tt https://ggvy.cl} \\
-    Code & \href{https://github.com/gvegayon}{\tt https://github.com/gvegayon}\\
-    Linkedin & \href{https://www.linkedin.com/in/georgevegayon/}{\tt https://www.linkedin.com/in/georgevegayon/}
+    website & \href{https://ggvy.cl}{\tt ggvy.cl} \\
+    Code & \href{https://github.com/gvegayon}{\tt github.com/gvegayon}\\
+    Linkedin & \href{https://www.linkedin.com/in/georgevegayon/}{\tt www.linkedin.com/in/georgevegayon/}
   \end{tabular}
 \end{minipage}
+
 
 \section*{Education}
 
 \begin{itemize}
 \item 
-{\bf Ph.D. in Biostatistics (with concentration in Stat. Comp.)} University of Southern California (2017-2020, expected) \\
-{\bf M.Sc. in Social Sciences (Economics)} California Institute of Technology (2016) \\
-{\bf Master in Economics and Public Policy}, Adolfo Ib\'a\~nez University (2011) \\
+{\bf Ph.D. in Biostatistics (with concentration in Stat. Comp.)} University of Southern California (2020). Dissertation \emph{``Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems''}
+
+{\bf M.Sc. in Social Sciences (Economics)} California Institute of Technology (2016)
+
+{\bf Master in Economics and Public Policy}, Adolfo Ib\'a\~nez University (2011)
+
 {\bf BS. in Social Sciences} and {\bf BS. in Business Administration}, Adolfo Ib\'a\~nez University (2010)
 \end{itemize}
 
 \section*{Professional Experience}
 
 \begin{itemize}
-\item \textbf{University of Southern California, 2015--present} Department of Preventive Medicine \emph{Research Programmer}. Development and Implementation of statistical methods using R, funded by National Cancer Institute, NIH, and the US Department of Defense.
+\item \textbf{University of Southern California, 2015--present} Department of Preventive Medicine \emph{Research Programmer}. A senior staff member at USC's Department of Preventive Medicine, I work closely with both staff and students on various scientific projects. My responsibilities included: implement statistical methods using R/C++, analyze complex data using USC's High-Performance Computing cluster, conducting training sessions on statistical computing, and writing scientific papers.
 \item \textbf{Chilean Pension Supervisor, August 2011-- August 2014} Research Division \emph{Analyst}. Statistical and econometric analysis on the Chilean unemployment insurance, statistical software development, serving as a bridge between the IT and Research divisions.
 \item \textbf{Nodos Chile Social Network Analysis Ltda., January 2012--January 2014} \emph{Partner}.
 Founding partner of one of the first applied SNA Consultancy Entrepreneurship in Chile.
