@@ -1,0 +1,185 @@
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage[minbibnames=3,sorting=ydnt,date=comp,isbn=false,doi=false,defernumbers=true,backend=biber]{biblatex}
+\addbibresource[]{papers.bib}
+\addbibresource[]{presentations.bib}
+%,
+
+
+%\usepackage[sfdefault]{cabin}
+%\usepackage[T1]{fontenc}
+
+\usepackage[sfdefault]{overlock} %% Option 'sfdefault' only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+
+
+% Set your name here
+\def\name{George G. Vega Yon}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{https://ggvy.cl}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = blue,
+  pdfauthor = {\name},
+  pdfkeywords = {economics, statistics, mathematics},
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+%  body={6.5in, 9in},
+  left=1.3cm,
+  top=1in,
+  right=1.3cm,
+  bottom=1in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+%\usepackage{sectsty}
+%\sectionfont{\sffamily\mdseries\Large}
+%\subsectionfont{\sffamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% rmfamily
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{0.45cm}
+  }
+}{
+  \end{list}
+}
+
+% Para poder poner comandos genericos en tablas (en el inicio del argumento)
+\usepackage{array}
+
+\begin{document}
+
+% Place name at left
+\part*{\name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+%\vspace{0.25in}
+
+\begin{minipage}{0.50\linewidth}
+  \begin{tabular}{>{\bfseries}p{.2\linewidth}p{.79\linewidth}}
+    Mobile & +1 (six two six) 381 8171 \\
+    e-mail & \href{mailto:g.vegayon@gmail.com}{\tt g.vegayon@gmail.com} \\
+    website & \href{https://ggvy.cl}{\tt ggvy.cl} \\
+    Code & \href{https://github.com/gvegayon}{\tt github.com/gvegayon}\\
+    Linkedin & \href{https://www.linkedin.com/in/georgevegayon/}{\tt www.linkedin.com/in/georgevegayon/}
+  \end{tabular}
+\end{minipage}
+
+
+\section*{Education}
+
+\begin{itemize}
+\item 
+{\bf Ph.D. in Biostatistics (with concentration in Stat. Comp.)} University of Southern California (2020). Dissertation \emph{``Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems''}
+
+{\bf M.Sc. in Social Sciences (Economics)} California Institute of Technology (2016)
+
+{\bf Master in Economics and Public Policy}, Adolfo Ib\'a\~nez University (2011)
+
+{\bf BS. in Social Sciences} and {\bf BS. in Business Administration}, Adolfo Ib\'a\~nez University (2010)
+\end{itemize}
+
+\section*{Professional Experience}
+
+\begin{itemize}
+\item \textbf{University of Southern California, 2015--present} Department of Preventive Medicine \emph{Research Programmer}. A senior staff member at USC's Department of Preventive Medicine, I work closely with both staff and students on various scientific projects. My responsibilities included: implement statistical methods using R/C++, analyze complex data using USC's High-Performance Computing cluster, conducting training sessions on statistical computing, and writing scientific papers.
+\item \textbf{Chilean Pension Supervisor, August 2011-- August 2014} Research Division \emph{Analyst}. Statistical and econometric analysis on the Chilean unemployment insurance, statistical software development, serving as a bridge between the IT and Research divisions.
+\item \textbf{Nodos Chile Social Network Analysis Ltda., January 2012--January 2014} \emph{Partner}.
+Founding partner of one of the first applied SNA Consultancy Entrepreneurship in Chile.
+\item \textbf{Adolfo Ib\'a\~nez University, January 2011--June 2012.} School of Government \emph{Adjunct Professor}.
+Taught Introductory courses of Economics, Microeconomics and Statistical computing with Stata.
+\item \textbf{Chilean Ministry of Social Planning, March 2011--December 201.} Social Programs Monitoring \emph{Analyst}.
+Survey and Analysis of the Government social programs supply and supporting the Monitoring Division with the Open-Data Initiative.
+\end{itemize}
+
+\section*{Software}
+
+\begin{itemize}
+\item[] R, C++, \LaTeX, SQL, XML, regex, Stata+Mata, VBA, Gephi, Pajek, Mathematica, MS Suit, git, unix
+\end{itemize}
+
+\section*{Selected Publications and Work in progress}
+\nocite{*}
+
+\printbibliography[title=\vskip-20pt,nottype=inproceedings,resetnumbers=true]
+
+\section*{Conferences and Presentations}
+
+\printbibliography[title=\vskip-20pt,type=inproceedings,resetnumbers=true]
+
+
+%\subsection*{Press and others}
+%
+% \begin{itemize}
+%\item
+%\href{https://gephi.wordpress.com/2013/02/12/rgexf-an-r-library-to-work-with-gexf-graph-files/}{``rgexf: An R library to work with GEXF graph files''} in {\it Gephi Blog}, published in february 12, 2013.
+%\item \href{http://www.elmostrador.cl/opinion/2012/04/04/aborto-en-twitter-un-debate-a-medias/}{``Aborto en Twitter: un debate a medias''} in {\it El Mostrador}, published in april 4, 2012.
+%\item \href{http://www.uai.cl/200911165701/columna-de-opinion/columnas-opinion/reinventar-la-ciudadania-la-otra-campana-que-obama-esta-ganando}{``Reinventar la ciudadanía, la otra campaña que Obama está ganando''} in {\it El Mostrador}, published in november 10, 2009.
+%\end{itemize}
+
+\section*{Honors and Professional Achievements}
+
+\begin{itemize}
+\item \textbf{Book reviewer}: ``Microeconometrics and Matlab: An Introduction'', by Adams, Clarke and Quinn, Oxford University Press, 2015. ``Mastering Gephi Network Visualization'', by Ken Cherven, Packt Publishing, 2015. ``Network Graph Analysis and Visualization with Gephi'', by Ken Cherven, Packt Publishing, 2013.
+\item \textbf{Awards} Travel Grant, Society of Young Network Scientist, 2019; Fellowship, California Institute of Technology, 2014; Scholarship, Adolfo Ib\'a\~nes University, 2006.
+%\item \textbf{Book reviewer} ``Microeconometrics and MATLAB'', by Abi Adams, Damian Clarke \& Simon Quinn, Oxford University Press, (forthcoming 2015).
+\item \textbf{Reviewer} The Official Journal of The Society for Computational Economics, The R Journal, Social Networks, Journal of Mathematical Sociology, Journal of Open Source Software, SUNBELT Conference (2016), International Conference on Computational Social Science (2019), International Conference on Computational Social Science (2020).
+\item \textbf{Misc} Founder of the \href{https://www.meetup.com/useRchile/}{R Users Group in Chile (2013)}, co-organizer of the \href{https://socalr.org}{East LA R User Group (LAERUG)}.
+%\item \textbf{Honorable Mention} (Posters Sesion. Work: \emph{Introducing Parallel: Stata Module for Parallel Computing}) given by the Chilean Economics Society during its 2012 annual meetting.
+%\item \textbf{Honour Scholarship} given by Adolfo Ib\'a\~nez University for completing undergrad and graduate studies (2006-2010).
+%\item \textbf{Software workshop, 2010.} \emph{Co-founder} of the workshop thaught by Economics and PP Masters's Students at Adolfo Ib\'a\~nez University in order to introduce grad students into scholar research software (\LaTeX, \emph{R}, Stata, etc.).
+\end{itemize}
+
+\bigskip
+
+% Footer
+\begin{center}
+ \begin{footnotesize}
+   last update: \today \\
+   \href{\footerlink}{\texttt{\footerlink}}
+ \end{footnotesize}
+\end{center}
+
+\end{document}
+
