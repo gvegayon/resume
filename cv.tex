@@ -16,7 +16,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[minbibnames=3,sorting=ndymdt,date=comp,isbn=false,doi=false,defernumbers=true,backend=biber]{biblatex}
 \addbibresource[]{papers.bib}
-\addbibresource[]{presentations.bib}
+\addbibresource[]{presentations-conference.bib}
+\addbibresource[]{presentations-invited.bib}
+\addbibresource[]{presentations-other.bib}
 
 \DeclareSortingTemplate{ndymdt}{
 	\sort[direction=descending]{
@@ -176,10 +178,14 @@ Taught Introductory courses of Economics, Microeconomics and Statistical computi
 Survey and Analysis of the Government social programs supply and supporting the Monitoring Division with the Open-Data Initiative.
 \end{itemize}
 
-\section*{Publications and Work in progress {\small (selected)}}
+\section*{Peer Reviewed Publications}
 \nocite{*}
 
-\printbibliography[title=\vskip-20pt,nottype=inproceedings,resetnumbers=true]
+\printbibliography[title=\vskip-20pt,keyword=published,resetnumbers=true]
+
+\section*{Work in Progress and Technical Reports}
+
+\printbibliography[title=\vskip-20pt,keyword=wip,resetnumbers=true]
 
 \section*{Software {\small(selected)}}
 
@@ -189,23 +195,28 @@ Survey and Analysis of the Government social programs supply and supporting the 
 \input{software.tex}
 \end{enumerate}
 
-\pagebreak
+%\pagebreak
 
-\section*{Conferences and Presentations}
+\section*{Conferences}
 
-\printbibliography[title=\vskip-20pt,type=inproceedings,resetnumbers=true]
+\printbibliography[title=\vskip-20pt,keyword=conferencetalk, resetnumbers=true]
 
+%\pagebreak
 
-%\subsection*{Press and others}
-%
-% \begin{itemize}
-%\item
-%\href{https://gephi.wordpress.com/2013/02/12/rgexf-an-r-library-to-work-with-gexf-graph-files/}{``rgexf: An R library to work with GEXF graph files''} in {\it Gephi Blog}, published in february 12, 2013.
-%\item \href{http://www.elmostrador.cl/opinion/2012/04/04/aborto-en-twitter-un-debate-a-medias/}{``Aborto en Twitter: un debate a medias''} in {\it El Mostrador}, published in april 4, 2012.
-%\item \href{http://www.uai.cl/200911165701/columna-de-opinion/columnas-opinion/reinventar-la-ciudadania-la-otra-campana-que-obama-esta-ganando}{``Reinventar la ciudadanía, la otra campaña que Obama está ganando''} in {\it El Mostrador}, published in november 10, 2009.
-%\end{itemize}
+\section*{Invited Speaker}
 
-\pagebreak
+\printbibliography[title=\vskip-20pt,keyword=invitedtalk, resetnumbers=true]
+
+\section*{Other Talks}
+
+\printbibliography[title=\vskip-20pt,keyword=othertalk, resetnumbers=true]
+
+\section*{Major Areas of Research Interest}
+
+Social Networks and Complex Systems\\
+Scientific Software Development and High Performance Computing\\
+Non-parametric Statistics\\
+Statistical Methods Development
 
 \section*{Honors and Services to the Profession}
 
@@ -216,16 +227,17 @@ Fellowship, California Institute of Technology, 2014.\\
 Honorable Mention (Posters Session) Chilean Economics Society, 2012.\\
 Scholarship, Universidad Adolfo Ib\'a\~nes, 2006
 %\item \textbf{Book reviewer} ``Microeconometrics and MATLAB'', by Abi Adams, Damian Clarke \& Simon Quinn, Oxford University Press, (forthcoming 2015).
-\item[] \textbf{Peer Reviewer} \\
+\item[] \textbf{Manuscript Review (Ad Hoc)} \\
 The Official Journal of The Society for Computational Economics\\
 The R Journal\\
 Social Networks\\
 Journal of Mathematical Sociology\\
-Journal of Open Source Software\\
+Journal of Open Source Software
+\item[] \textbf{Abstract Review} \\
 International Conference on Computational Social Science (2019)\\
 International Conference on Computational Social Science (2020)\\
 SUNBELT Conference (2016)
-\item[] \textbf{Book reviewer}\\
+\item[] \textbf{Book Review}\\
 ``Microeconometrics and Matlab: An Introduction'', by Adams, Clarke and Quinn, Oxford University Press, 2015.\\
 ``Mastering Gephi Network Visualization'', by Ken Cherven, Packt Publishing, 2015.\\
 ``Network Graph Analysis and Visualization with Gephi'', by Ken Cherven, Packt Publishing, 2013.
