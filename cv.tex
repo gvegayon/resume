@@ -12,12 +12,51 @@
 
 \usepackage{hyperref}
 \usepackage{geometry}
-\usepackage[minbibnames=3,sorting=ydnt,date=comp,isbn=false,doi=false,defernumbers=true,backend=biber]{biblatex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[minbibnames=3,sorting=ndymdt,date=comp,isbn=false,doi=false,defernumbers=true,backend=biber]{biblatex}
 \addbibresource[]{papers.bib}
 \addbibresource[]{presentations.bib}
 
+\DeclareSortingTemplate{ndymdt}{
+	\sort[direction=descending]{
+		\field{sortyear}
+		\field{year}
+		\literal{9999}
+	}
+	\sort[direction=descending]{
+		\field[padside=left,padwidth=2,padchar=0]{month}
+		\literal{99}
+	}
+	\sort[direction=descending]{
+		\field[padside=left,padwidth=2,padchar=0]{day}
+		\literal{99}
+	}
+	\sort{
+		\field{presort}
+	}
+	\sort[final]{
+		\field{sortkey}
+	}
+	\sort{
+		\field{sortname}
+		\field{author}
+		\field{editor}
+		\field{translator}
+		\field{sorttitle}
+		\field{title}
+	}
+	\sort{
+		\field{sorttitle}
+	}
+	\sort[direction=descending]{
+		\field[padside=left,padwidth=4,padchar=0]{volume}
+		\literal{9999}
+	}
+}
+
 \usepackage{graphicx}
-%,
+
 
 
 %\usepackage[sfdefault]{cabin}
@@ -27,6 +66,8 @@
 \usepackage[T1]{fontenc}
 
 \usepackage{enumitem}
+\usepackage{setspace}
+	\onehalfspacing
 
 
 % Set your name here
@@ -49,9 +90,9 @@
 
 \geometry{
 %  body={6.5in, 9in},
-  left=1.3cm,
+  left=1in,
   top=1in,
-  right=1.3cm,
+  right=1in,
   bottom=1in
 }
 
@@ -115,11 +156,11 @@
 \item 
 {\bf Ph.D. in Biostatistics (with concentration in Stat. Comp.)} (2020)\\
 University of Southern California, USA\\
-Dissertation \emph{``Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems''}
+Dissertation title:\\\emph{``Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems''}
 \item {\bf M.Sc. in Social Sciences (with concentration in Econometrics)} (2016)\\
 California Institute of Technology, USA
 \item {\bf Master in Economics and Public Policy} (2011)\\Adolfo Ib\'a\~nez University, Chile 
-\item {\bf BS. in Social Sciences} and {\bf BS. in Business Administration} (with a minor in Political Science) (2010)\\Adolfo Ib\'a\~nez University, Chile
+\item {\bf BS. in Business Administration} (with a minor in Political Science) (2010)\\Adolfo Ib\'a\~nez University, Chile
 \end{itemize}
 
 \section*{Professional Experience}
@@ -131,18 +172,14 @@ California Institute of Technology, USA
 Founding partner of one of the first applied SNA Consultancy Entrepreneurship in Chile.
 \item \textbf{Adolfo Ib\'a\~nez University, January 2011--June 2012.} School of Government \emph{Adjunct Professor}.
 Taught Introductory courses of Economics, Microeconomics and Statistical computing with Stata.
-\item \textbf{Chilean Ministry of Social Planning, March 2011--December 201.} Social Programs Monitoring \emph{Analyst}.
+\item \textbf{Chilean Ministry of Social Planning, March 2011--December 2011.} Social Programs Monitoring \emph{Analyst}.
 Survey and Analysis of the Government social programs supply and supporting the Monitoring Division with the Open-Data Initiative.
 \end{itemize}
 
-\pagebreak
-
-\section*{Selected Publications and Work in progress}
+\section*{Publications and Work in progress {\small (selected)}}
 \nocite{*}
 
 \printbibliography[title=\vskip-20pt,nottype=inproceedings,resetnumbers=true]
-
-\pagebreak
 
 \section*{Software {\small(selected)}}
 
@@ -193,7 +230,9 @@ SUNBELT Conference (2016)
 ``Mastering Gephi Network Visualization'', by Ken Cherven, Packt Publishing, 2015.\\
 ``Network Graph Analysis and Visualization with Gephi'', by Ken Cherven, Packt Publishing, 2013.
 
-\item[] \textbf{Misc} Founder of the \href{https://www.meetup.com/useRchile/}{R Users Group in Chile (2013)}, co-organizer of the \href{https://socalr.org}{East LA R User Group (LAERUG)}.
+\item[] \textbf{Misc}\\
+Founder of the (first) \href{https://www.meetup.com/useRchile/}{R Users Group in Chile (2013)}\\
+Co-organizer of the \href{https://socalr.org}{East LA R User Group (LAERUG)}.
 %\item \textbf{Honorable Mention} (Posters Sesion. Work: \emph{Introducing Parallel: Stata Module for Parallel Computing}) given by the Chilean Economics Society during its 2012 annual meetting.
 %\item \textbf{Honour Scholarship} given by Adolfo Ib\'a\~nez University for completing undergrad and graduate studies (2006-2010).
 %\item \textbf{Software workshop, 2010.} \emph{Co-founder} of the workshop thaught by Economics and PP Masters's Students at Adolfo Ib\'a\~nez University in order to introduce grad students into scholar research software (\LaTeX, \emph{R}, Stata, etc.).

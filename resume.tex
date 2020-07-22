@@ -15,7 +15,45 @@
 \usepackage[minbibnames=3,sorting=ydnt,date=comp,isbn=false,doi=false]{biblatex}
 \addbibresource{papers.bib}
 
+\DeclareSortingTemplate{ndymdt}{
+	\sort[direction=descending]{
+		\field{sortyear}
+		\field{year}
+		\literal{9999}
+	}
+	\sort[direction=descending]{
+		\field[padside=left,padwidth=2,padchar=0]{month}
+		\literal{99}
+	}
+	\sort[direction=descending]{
+		\field[padside=left,padwidth=2,padchar=0]{day}
+		\literal{99}
+	}
+	\sort{
+		\field{presort}
+	}
+	\sort[final]{
+		\field{sortkey}
+	}
+	\sort{
+		\field{sortname}
+		\field{author}
+		\field{editor}
+		\field{translator}
+		\field{sorttitle}
+		\field{title}
+	}
+	\sort{
+		\field{sorttitle}
+	}
+	\sort[direction=descending]{
+		\field[padside=left,padwidth=4,padchar=0]{volume}
+		\literal{9999}
+	}
+}
 
+\usepackage{graphicx}
+\usepackage{enumitem}
 
 %\usepackage[sfdefault]{cabin}
 %\usepackage[T1]{fontenc}
@@ -100,7 +138,8 @@
     e-mail & \href{mailto:g.vegayon@gmail.com}{\tt g.vegayon@gmail.com} \\
     website & \href{https://ggvy.cl}{\tt ggvy.cl} \\
     Code & \href{https://github.com/gvegayon}{\tt github.com/gvegayon}\\
-    Linkedin & \href{https://www.linkedin.com/in/georgevegayon/}{\tt www.linkedin.com/in/georgevegayon/}
+    Linkedin & \href{https://www.linkedin.com/in/georgevegayon/}{\tt www.linkedin.com/in/georgevegayon/} \\
+    Talks & \href{https://ggv.cl/talk}{\tt ggv.cl/talk}
   \end{tabular}
 \end{minipage}
 
@@ -131,17 +170,26 @@ Taught Introductory courses of Economics, Microeconomics and Statistical computi
 Survey and Analysis of the Government social programs supply and supporting the Monitoring Division with the Open-Data Initiative.
 \end{itemize}
 
-\section*{Software}
+\section*{Software {\small (selected)}}
 
-\begin{itemize}
-\item[] R, C++, \LaTeX, SQL, XML, regex, Stata+Mata, VBA, Gephi, Pajek, Mathematica, MS Suit, git, unix
-\end{itemize}
+\begin{enumerate}[label={[}\arabic*{]},labelindent=5\parindent,labelsep=8pt]
+\item {\bfseries George G.} {\bfseries Vega Yon}. \textit{rgexf: Build, Import and Export GEXF Graph Files} (2020). R package version 0.16.0. {\small URL}: \url{https://CRAN.R-project.org/package=rgexf}. \includegraphics[width=2.5cm]{fig/cran-downloads-rgexf.pdf} 
+\item {\bfseries George G.} {\bfseries Vega Yon}, Thomas Valente. \textit{{{netdiffuseR: Analysis of Diffusion and Contagion Processes on Networks}}} (2020). R package version 1.22.0. {\small URL}: \url{https://github.com/USCCANA/netdiffuseR}. \includegraphics[width=2.5cm]{fig/cran-downloads-netdiffuser.pdf} 
+\item {\bfseries George G.} {\bfseries Vega Yon}, Kayla de la Haye. \textit{ergmito: Exponential Random Graph Models for Small Networks} (2020). R package version 0.3-0. {\small URL}: \url{https://cran.r-project.org/package=ergmito}. \includegraphics[width=2.5cm]{fig/cran-downloads-ergmito.pdf} 
+\item {\bfseries George G.} {\bfseries Vega Yon}. \textit{slurmR: A Lightweight Wrapper for 'Slurm'} (2020). R package version 0.4-1. {\small URL}: \url{https://CRAN.R-project.org/package=slurmR}. \includegraphics[width=2.5cm]{fig/cran-downloads-slurmr.pdf} 
+\item {\bfseries George G.} {\bfseries Vega Yon}. \textit{fmcmc: A friendly MCMC framework} (2020). R package version 0.3-0. {\small URL}: \url{https://CRAN.R-project.org/package=fmcmc}. \includegraphics[width=2.5cm]{fig/cran-downloads-fmcmc.pdf} 
+\item {\bfseries George G.} {\bfseries Vega Yon}. \textit{barry: your to-go motif accountant} (2020). C++ library version 0.0-1. {\small URL}: \url{https://github.com/USCbiostats/barry}.  
+\item {\bfseries George G.} {\bfseries Vega Yon}. \textit{{twitterreport: Out-of-the-box analysis and 
+		reporting tools for twitter}} (2016). R package version 0.16. {\small URL}: \url{https://doi.org/10.5281/zenodo.44528}.  
+\end{enumerate}
 
-\section*{Selected Publications and Work in progress}
+\section*{Academic Publications {\small (selected)}}
 
-\nocite{VegaYon2019a,VegaYon2019b,VegaYon2019c,Bell2019,DelaHaye2019,Valente2020,Valente2019,FabregaLacoa2013,vega2015rgexf,vega2019exponential,vega2013abcoptim,vega2020ergmito,vegayon2020aphylo}
+\nocite{yon2019exponential,VegaYon2019c,VegaYon2019a,VegaYon2019b,vegayon2020aphylo}
 
 \printbibliography[title=\vskip-20pt,omitnumbers=true]
+
+
 
 %\subsection*{Conferences and Presentations}
 %
@@ -163,6 +211,7 @@ Survey and Analysis of the Government social programs supply and supporting the 
 \section*{Honors and Professional Achievements}
 
 \begin{itemize}
+\item \textbf{Technologies} R, C++, \LaTeX, SQL, XML, regex, Stata+Mata, VBA, Gephi, Pajek, Mathematica, MS Suit, git, unix.
 \item \textbf{Book reviewer}: ``Microeconometrics and Matlab: An Introduction'', by Adams, Clarke and Quinn, Oxford University Press, 2015. ``Mastering Gephi Network Visualization'', by Ken Cherven, Packt Publishing, 2015. ``Network Graph Analysis and Visualization with Gephi'', by Ken Cherven, Packt Publishing, 2013.
 \item \textbf{Awards} Travel Grant, Society of Young Network Scientist, 2019; Fellowship, California Institute of Technology, 2014; Scholarship, Adolfo Ib\'a\~nes University, 2006.
 %\item \textbf{Book reviewer} ``Microeconometrics and MATLAB'', by Abi Adams, Damian Clarke \& Simon Quinn, Oxford University Press, (forthcoming 2015).

@@ -9,7 +9,7 @@ bib <- unclass(bib)
 bib <- lapply(bib, function(b) {
   b$author <- paste(gsub(
     "George( G.)? Vega( Yon)?|Vega( Yon)?, George( G.)?",
-    "{\\\\bfseries Vega Yon}, {\\\\bfseries George G.}",
+    "{\\\\bfseries George G.} {\\\\bfseries Vega Yon}",
     b$author
     ), collapse = ", ")
   b
@@ -20,7 +20,7 @@ for (n in names(bib)) {
   
   # Figuiring out badge
   if (file.exists(badge <- sprintf("fig/cran-downloads-%s.pdf", tolower(n))))
-    badge <- sprintf("\\includegraphics[width=2.5cm]{%s}", badge)
+    badge <- sprintf("\\\\\\includegraphics[width=2.5cm]{%s}", badge)
   else
     badge <- ""
   
