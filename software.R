@@ -9,7 +9,7 @@ bib <- unclass(bib)
 bib <- lapply(bib, function(b) {
   b$author <- paste(gsub(
     "George( G.)? Vega( Yon)?|Vega( Yon)?, George( G.)?",
-    "{\\\\bfseries George G.} {\\\\bfseries Vega Yon}",
+    "\\\\textbf{George G.} \\\\textbf{Vega Yon}",
     b$author
     ), collapse = ", ")
   b
