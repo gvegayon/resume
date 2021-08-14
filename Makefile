@@ -5,5 +5,8 @@ all:
 docx:
 	pandoc --bibliography=papers.bib -f latex -t docx resume.tex -o resume.docx
 
+update:
+	rsync -av ../../talks/talks-all/*.bib .
+
 .PHONY: docx all
 
