@@ -1,6 +1,38 @@
 library(bibtex)
 
-unpublished <- c("pruner", "barry", "aphylo", "netplot", "twitterreport")
+# Getting the badges
+pkgs <- c(
+  "netdiffuseR",
+  "rgexf",
+  "ABCoptim",
+  "ergmito",
+  "fmcmc",
+  "slurmR",
+  "googlePublicData",
+  "aphylo",
+  "netplot"
+  )
+
+for (pkg in pkgs) {
+  pkg_svg <- sprintf("fig/cran-downloads-%s.svg", tolower(pkg))
+  pkg_pdf <- sprintf("fig/cran-downloads-%s.pdf", tolower(pkg))
+  
+  download.file(
+    url = sprintf("http://cranlogs.r-pkg.org/badges/grand-total/%s", pkg),
+    destfile = pkg_svg
+  )
+  
+  system(
+    sprintf(
+      "inkscape %s --export-area-drawing --batch-process --export-type=pdf --export-filename=%s",
+      pkg_svg,
+      pkg_pdf
+      )
+    )
+}
+  
+
+unpublished <- c("pruner", "barry", "twitterreport", "epiworld")
 
 bib <- read.bib("software.bib")
 
@@ -15,7 +47,8 @@ bib <- lapply(bib, function(b) {
   b
 })
 bib <- bib[order(as.integer(sapply(bib, "[[", "year")), decreasing = TRUE)]
-tmp <- tempfile()
+tmp <- "software.tex"
+file.remove(tmp)
 for (n in names(bib)) {
   
   # Figuiring out badge
@@ -34,5 +67,3 @@ for (n in names(bib)) {
     append = TRUE
     )
 }
-
-file.rename(tmp, "software.tex")
