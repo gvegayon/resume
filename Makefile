@@ -8,5 +8,8 @@ docx:
 update:
 	rsync -av ../talks/*.bib .
 
+software: software.R
+	R CMD BATCH --vanilla software.R &
+
 .PHONY: docx all
 
