@@ -10,7 +10,8 @@ pkgs <- c(
   "slurmR",
   "googlePublicData",
   "aphylo",
-  "netplot"
+  "netplot",
+  "epiworldR"
   )
 
 for (pkg in pkgs) {
@@ -32,7 +33,7 @@ for (pkg in pkgs) {
 }
   
 
-unpublished <- c("pruner", "barry", "twitterreport", "epiworld")
+unpublished <- c("pruner", "barry", "twitterreport", "epiworld", "defm")
 
 bib <- read.bib("software.bib")
 
