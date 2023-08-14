@@ -11,7 +11,8 @@ pkgs <- c(
   "googlePublicData",
   "aphylo",
   "netplot",
-  "epiworldR"
+  "epiworldR",
+  "defm"
   )
 
 for (pkg in pkgs) {
