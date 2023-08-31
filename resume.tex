@@ -11,6 +11,16 @@
 \documentclass[letterpaper, 10pt]{article}
 
 \usepackage{hyperref}
+\usepackage[dvipscol]{xcolor}
+
+\definecolor{myteal}{HTML}{00B0F0}
+
+\newcommand{\myorange}{myteal!70!black}
+\newcommand{\darkorange}{\myorange !50!black}
+
+\renewcommand{\bf}{\bfseries\color{\myorange}}
+\renewcommand{\textbf}[1]{{\bfseries\color{\myorange}#1}}
+
 \usepackage{geometry}
 \usepackage[minbibnames=4,maxbibnames=4,sorting=ydnt,date=comp,isbn=false,doi=false]{biblatex}
 \addbibresource{papers.bib}
@@ -78,7 +88,7 @@
 % The following metadata will show up in the PDF properties
 \hypersetup{
   colorlinks = true,
-  urlcolor = blue,
+  urlcolor = \myorange,
   pdfauthor = {\name},
   pdfkeywords = {economics, statistics, mathematics},
   pdftitle = {\name: Curriculum Vitae},
@@ -90,9 +100,12 @@
 %  body={6.5in, 9in},
   left=1.3cm,
   top=1in,
-  right=1.3cm,
+  right=5cm,
   bottom=1in
 }
+
+% Not justified text
+\raggedright
 
 % Customize page headers
 \usepackage{fancyhdr}
@@ -134,14 +147,22 @@
 % Para poder poner comandos genericos en tablas (en el inicio del argumento)
 \usepackage{array}
 
-\renewcommand{\bf}{\bfseries\color{teal}}
-\renewcommand{\textbf}[1]{{\bfseries\color{teal}#1}}
-\usepackage{xcolor}
+\usepackage{tikz}
+
 \begin{document}
 	
-	% Place name at left
-	\hfill \includegraphics[width=.4\linewidth]{fig/ukfaculty.pdf}\vspace{-6cm}
-	\part*{\color{darkgray}{\name}}
+\begin{tikzpicture}[remember picture, overlay]
+	\node[anchor=north east, inner sep=30pt] at (current page.north east) {\includegraphics[width=0.5\textwidth]{fig/ukfaculty.pdf}};
+\end{tikzpicture}
+
+	% % Place name at left
+	% \hfill \includegraphics[width=.4\linewidth]{fig/ukfaculty.pdf}
+	\vspace{-2.5cm}
+	\part*{\color{darkgray}{\name}} 
+	
+	\vspace{-.4cm}
+	\color{darkgray}{\textit{Data Science, Statistical Computing, \& Complex Systems Modeling}}
+	\bigskip
 
 
 
@@ -162,7 +183,7 @@
 \end{minipage}
 
 
-\section*{Education}
+\section*{\color{\darkorange}{Education}}
 
 \begin{itemize}
 \item 
@@ -175,21 +196,17 @@
 {\bf BS. in Social Sciences} and {\bf BS. in Business Administration}, Universidad Adolfo Ib\'a\~nez (2011)
 \end{itemize}
 
-\section*{Professional Experience}
+\section*{\color{\darkorange}{Professional Experience}}
 
 \begin{itemize}
 \item \textbf{University of Utah, November 2021--Present} Division of Epidemiology \emph{Research Assistant Professor}. Division of Population Health Sciences, \emph{Adjunct Assistant Professor}.
 \item \textbf{University of Southern California, 2015--November 2021} Department of Preventive Medicine \emph{Research Programmer}. As a senior research staff member, my responsibilities include: Provide technical support on statistical computing, e.g., HPC, run training sessions on scientific software development, and writing scientific papers. Since August 2020, I co-instruct the Department's Introduction to Data Science class.
 \item \textbf{Chilean Pension Supervisor, August 2011-- August 2014} Research Division \emph{Analyst}. Statistical and econometric analysis on the Chilean unemployment insurance, statistical software development, serving as a bridge between the IT and Research divisions.
-\item \textbf{Nodos Chile Social Network Analysis Ltda., January 2012--January 2014} \emph{Partner}.
-Founding partner of one of the first applied SNA Consultancy Entrepreneurship in Chile.
 \item \textbf{Universidad Adolfo Ib\'a\~nez, January 2011--June 2012.} School of Government \emph{Adjunct Professor}.
 Taught Introductory courses of Economics, Microeconomics and Statistical computing with Stata.
-\item \textbf{Chilean Ministry of Social Planning, March 2011--December 2011.} Social Programs Monitoring \emph{Analyst}.
-Survey and Analysis of the Government social programs supply and supporting the Monitoring Division with the Open-Data Initiative.
 \end{itemize}
 
-\section*{Software {\small (selected)}}
+\section*{\color{\darkorange}{Software {\small (selected)}}}
 
 \begin{enumerate}[label={[}\arabic*{]},labelindent=5\parindent,labelsep=8pt]
 \item {\bfseries George G.} {\bfseries Vega Yon}. \textit{{aphylo: Statistical Inference of Annotated Phylogenetic Trees}} (2022). R package version 0.2-1 {\small URL}: \url{https://cran.r-project.org/package=aphylo}. \includegraphics[width=2.5cm]{fig/cran-downloads-aphylo.pdf}
@@ -201,9 +218,9 @@ Survey and Analysis of the Government social programs supply and supporting the 
 %\item {\bfseries George G.} {\bfseries Vega Yon}. \textit{barry: your to-go motif accountant} (2020). C++ library version 0.0-1. {\small URL}: \url{https://github.com/USCbiostats/barry}.  
 \end{enumerate}
 
-\section*{Academic Publications {\small (selected)}}
+\section*{\color{\darkorange}{Academic Publications {\small (selected)}}}
 
-\nocite{yon2019exponential,VegaYon2019c,VegaYon2019a,vegayon2020aphylo,Hancean2022,ouellet2022} %VegaYon2019b
+\nocite{yon2019exponential,VegaYon2019c,VegaYon2019a,vegayon2020aphylo,vegayonPowerMulticollinearitySmall2023,vegayonDiscreteExponentialFamilyModels2022} %VegaYon2019b
 
 \printbibliography[title=\vskip-20pt,omitnumbers=true]
 
@@ -226,14 +243,14 @@ Survey and Analysis of the Government social programs supply and supporting the 
 %\item \href{http://www.uai.cl/200911165701/columna-de-opinion/columnas-opinion/reinventar-la-ciudadania-la-otra-campana-que-obama-esta-ganando}{``Reinventar la ciudadanía, la otra campaña que Obama está ganando''} in {\it El Mostrador}, published in november 10, 2009.
 %\end{itemize}
 
-\section*{Honors and Professional Achievements}
+\section*{\color{\darkorange}{Honors and Professional Achievements}}
 
 \begin{itemize}
-\item \textbf{Technologies} R, C++, \LaTeX, SQL, python, XML, regex, Stata, VBA, Gephi, Pajek, Mathematica, git, Docker, Visual Studio Code, unix.
-\item \textbf{Book reviewer}: ``Microeconometrics and Matlab: An Introduction'', by Adams, Clarke and Quinn, Oxford University Press, 2015. ``Mastering Gephi Network Visualization'', by Ken Cherven, Packt Publishing, 2015. ``Network Graph Analysis and Visualization with Gephi'', by Ken Cherven, Packt Publishing, 2013.
+\item \textbf{Technologies} R, C++, \LaTeX, SQL, Python, XML, regex, Stata, AWS, Gephi, Pajek, Mathematica, Git, Docker, Visual Studio Code, tensorflow, continuous integration, Slurm, Unix.
+% \item \textbf{Book reviewer}: ``Microeconometrics and Matlab: An Introduction'', by Adams, Clarke and Quinn, Oxford University Press, 2015. ``Mastering Gephi Network Visualization'', by Ken Cherven, Packt Publishing, 2015. ``Network Graph Analysis and Visualization with Gephi'', by Ken Cherven, Packt Publishing, 2013.
 \item \textbf{Awards} Best paper, 72 ICA conference, 2022; Travel Grant, Society of Young Network Scientist, 2019; Fellowship, California Institute of Technology, 2014; Scholarship, Adolfo Ib\'a\~nes University, 2006.
 %\item \textbf{Book reviewer} ``Microeconometrics and MATLAB'', by Abi Adams, Damian Clarke \& Simon Quinn, Oxford University Press, (forthcoming 2015).
-\item \textbf{Manuscript reviewer} The Official Journal of The Society for Computational Economics, The R Journal, Social Networks, Journal of Mathematical Sociology, Journal of Open Source Software, Bioinformatics, Computer Methods and Programs in Biomedicine Update, American Statistical Association, SUNBELT Conference (2016), International Conference on Computational Social Science (2019--2021).
+\item \textbf{Manuscript reviewer} JASA, BMC Infectious Diseases, The Official Journal of The Society for Computational Economics, The R Journal, Social Networks, Journal of Mathematical Sociology, JOSS, Bioinformatics, Computer Methods and Programs in Biomedicine Update, SUNBELT Conference (2016), IC2S2 (2019--2021).
 \item \textbf{Misc} Founder of the \href{https://www.meetup.com/useRchile/}{R Users Group in Chile (2013)}, co-organizer of the \href{https://socalr.org}{East LA R User Group (LAERUG)}.
 %\item \textbf{Honorable Mention} (Posters Sesion. Work: \emph{Introducing Parallel: Stata Module for Parallel Computing}) given by the Chilean Economics Society during its 2012 annual meetting.
 %\item \textbf{Honour Scholarship} given by Adolfo Ib\'a\~nez University for completing undergrad and graduate studies (2006-2010).
