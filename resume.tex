@@ -100,7 +100,7 @@
 %  body={6.5in, 9in},
   left=1.3cm,
   top=1in,
-  right=5cm,
+  right=6cm,
   bottom=1in
 }
 
@@ -138,7 +138,7 @@
 % Make lists without bullets
 \renewenvironment{itemize}{
   \begin{list}{}{
-    \setlength{\leftmargin}{0.45cm}
+    \setlength{\leftmargin}{0.3cm}
   }
 }{
   \end{list}
@@ -155,16 +155,34 @@
 	\node[anchor=north east, inner sep=30pt] at (current page.north east) {\includegraphics[width=0.5\textwidth]{fig/ukfaculty.pdf}};
 \end{tikzpicture}
 
+% embed a pdf page
+
+
+
+\begin{tikzpicture}[remember picture, overlay]
+	\node[anchor=east, inner sep=20pt] at (current page.east) {%
+	% \includepdf[pages={1}]{fig/hexlogos.pdf} %
+	\href[]{https://github.com/gvegayon}{\includegraphics[page=1,width=0.35\textwidth]{fig/hexlogos.pdf}}%
+	};
+	
+\end{tikzpicture}
+
+
 	% % Place name at left
 	% \hfill \includegraphics[width=.4\linewidth]{fig/ukfaculty.pdf}
-	\vspace{-2.5cm}
+	\vspace{-3cm}
 	\part*{\color{darkgray}{\name}} 
 	
-	\vspace{-.4cm}
+	\vspace{-.25cm}
 	\color{darkgray}{\textit{Data Science, Statistical Computing, \& Complex Systems Modeling}}
 	\bigskip
 
 
+	\begin{minipage}{.9\linewidth}
+	I'm an accomplished \textbf{data scientist} with over \textbf{10 years of experience} with multiple software packages and scientific publications. My software has been downloaded over \textbf{half a million times}, and my papers have over \textbf{200 citations}. My work has spanned data science, economics, network science, statistics, and phylogenetics. I seek new challenges, enjoy collaborating with others, and excel at mentoring.
+	\end{minipage}
+
+	\bigskip
 
 % Alternatively, print name centered and bold:
 %\centerline{\huge \bf \name}
@@ -184,6 +202,7 @@
 
 
 \section*{\color{\darkorange}{Education}}
+\vspace{-.25cm}
 
 \begin{itemize}
 \item 
@@ -196,7 +215,10 @@
 {\bf BS. in Social Sciences} and {\bf BS. in Business Administration}, Universidad Adolfo Ib\'a\~nez (2011)
 \end{itemize}
 
+
+
 \section*{\color{\darkorange}{Professional Experience}}
+\vspace{-.25cm}
 
 \begin{itemize}
 \item \textbf{University of Utah, November 2021--Present} Division of Epidemiology \emph{Research Assistant Professor}. Division of Population Health Sciences, \emph{Adjunct Assistant Professor}.
@@ -207,6 +229,7 @@ Taught Introductory courses of Economics, Microeconomics and Statistical computi
 \end{itemize}
 
 \section*{\color{\darkorange}{Software {\small (selected)}}}
+\vspace{-.25cm}
 
 \begin{enumerate}[label={[}\arabic*{]},labelindent=5\parindent,labelsep=8pt]
 \item {\bfseries George G.} {\bfseries Vega Yon}. \textit{{aphylo: Statistical Inference of Annotated Phylogenetic Trees}} (2022). R package version 0.2-1 {\small URL}: \url{https://cran.r-project.org/package=aphylo}. \includegraphics[width=2.5cm]{fig/cran-downloads-aphylo.pdf}
@@ -219,6 +242,7 @@ Taught Introductory courses of Economics, Microeconomics and Statistical computi
 \end{enumerate}
 
 \section*{\color{\darkorange}{Academic Publications {\small (selected)}}}
+\vspace{-.25cm}
 
 \nocite{yon2019exponential,VegaYon2019c,VegaYon2019a,vegayon2020aphylo,vegayonPowerMulticollinearitySmall2023,vegayonDiscreteExponentialFamilyModels2022} %VegaYon2019b
 
@@ -244,6 +268,7 @@ Taught Introductory courses of Economics, Microeconomics and Statistical computi
 %\end{itemize}
 
 \section*{\color{\darkorange}{Honors and Professional Achievements}}
+\vspace{-.25cm}
 
 \begin{itemize}
 \item \textbf{Technologies} R, C++, \LaTeX, SQL, Python, XML, regex, Stata, AWS, Gephi, Pajek, Mathematica, Git, Docker, Visual Studio Code, tensorflow, continuous integration, Slurm, Unix.
@@ -256,8 +281,6 @@ Taught Introductory courses of Economics, Microeconomics and Statistical computi
 %\item \textbf{Honour Scholarship} given by Adolfo Ib\'a\~nez University for completing undergrad and graduate studies (2006-2010).
 %\item \textbf{Software workshop, 2010.} \emph{Co-founder} of the workshop thaught by Economics and PP Masters's Students at Adolfo Ib\'a\~nez University in order to introduce grad students into scholar research software (\LaTeX, \emph{R}, Stata, etc.).
 \end{itemize}
-
-\bigskip
 
 % Footer
 \begin{center}
