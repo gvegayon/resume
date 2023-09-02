@@ -8,7 +8,7 @@
 % this notice and the above URL in the source code if you choose to
 % redistribute this file.
 
-\documentclass[letterpaper, 10pt]{article}
+\documentclass[letterpaper, 9pt]{article}
 
 \usepackage{hyperref}
 \usepackage[dvipscol]{xcolor}
@@ -98,16 +98,16 @@
 
 \geometry{
 %  body={6.5in, 9in},
-  left=1.3cm,
-  top=1in,
-  right=6cm,
-  bottom=1in
+  left=1cm,
+  top=1.3cm,
+  right=5.5cm,
+  bottom=1.3cm
 }
 
 % Not justified text
 \raggedright
 
-% Customize page headers
+% % Customize page headers
 \usepackage{fancyhdr}
 %\pagestyle{myheadings}
 %\markright{\includegraphics[width=1cm]{fig/ukfaculty.pdf} \name}
@@ -115,8 +115,8 @@
 \fancyhead{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
-\fancyhead[L]{\includegraphics[width=1cm]{fig/ukfaculty.pdf}\\\vspace{-.75cm}\hspace{1.1cm}\emph{\name}}
-\fancyhead[R]{\small\thepage}
+% \fancyhead[L]{\includegraphics[width=1cm]{fig/ukfaculty.pdf}\\\vspace{-.75cm}\hspace{1.1cm}\emph{\name}}
+% \fancyhead[R]{\small\thepage}
 \thispagestyle{empty}
 
 % Custom section fonts
@@ -170,7 +170,7 @@
 
 	% % Place name at left
 	% \hfill \includegraphics[width=.4\linewidth]{fig/ukfaculty.pdf}
-	\vspace{-3cm}
+	\vspace{-2cm}
 	\part*{\color{darkgray}{\name}} 
 	
 	\vspace{-.25cm}
@@ -179,6 +179,7 @@
 
 
 	\begin{minipage}{.9\linewidth}
+	\raggedright
 	I'm an accomplished \textbf{data scientist} with over \textbf{10 years of experience} with multiple software packages and scientific publications. My software has been downloaded over \textbf{half a million times}, and my papers have over \textbf{200 citations}. My work has spanned data science, economics, network science, statistics, and phylogenetics. I seek new challenges, enjoy collaborating with others, and excel at mentoring.
 	\end{minipage}
 
@@ -206,27 +207,56 @@
 
 \begin{itemize}
 \item 
-{\bf Ph.D. in Biostatistics (concentration in Stat. Comp.)} University of Southern California (2020). Dissertation \emph{``Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems''}
+{\bf Ph.D. in Biostatistics (Stat. Comp.)} University of Southern California (2020).
 
 {\bf M.Sc. in Social Sciences (Economics)} California Institute of Technology (2016)
 
 {\bf Master in Economics and Public Policy}, Universidad Adolfo Ib\'a\~nez (2011)
 
-{\bf BS. in Social Sciences} and {\bf BS. in Business Administration}, Universidad Adolfo Ib\'a\~nez (2011)
+{\bf BS. in Business Administration}, Universidad Adolfo Ib\'a\~nez (2011)
 \end{itemize}
 
-
-
+\vspace{-.5cm}
 \section*{\color{\darkorange}{Professional Experience}}
 \vspace{-.25cm}
 
 \begin{itemize}
-\item \textbf{University of Utah, November 2021--Present} Division of Epidemiology \emph{Research Assistant Professor}. Division of Population Health Sciences, \emph{Adjunct Assistant Professor}.
-\item \textbf{University of Southern California, 2015--November 2021} Department of Preventive Medicine \emph{Research Programmer}. As a senior research staff member, my responsibilities include: Provide technical support on statistical computing, e.g., HPC, run training sessions on scientific software development, and writing scientific papers. Since August 2020, I co-instruct the Department's Introduction to Data Science class.
-\item \textbf{Chilean Pension Supervisor, August 2011-- August 2014} Research Division \emph{Analyst}. Statistical and econometric analysis on the Chilean unemployment insurance, statistical software development, serving as a bridge between the IT and Research divisions.
-\item \textbf{Universidad Adolfo Ib\'a\~nez, January 2011--June 2012.} School of Government \emph{Adjunct Professor}.
-Taught Introductory courses of Economics, Microeconomics and Statistical computing with Stata.
+\item \textbf{University of Utah, November 2021--Present} Department of Internal Medicine\\
+\emph{Research Assistant Professor in Epidemiology}\\
+\emph{Adjunct Assistant Professor in Population Health Sciences}. 
+\begin{itemize}
+	\item[-] Research areas: Mechanistic Machine Learning, Social Networks, Computational Epidemiology, Phylogenetics, Statistical Computing.
+	\item[-] Managed group of research assistants (staff and graduate students).
+	\item[-] Taught course on HPC using R and C++ (graduate level).
+	\item[-] Lead the "Network Science and Social Network Analysis at the U" (NetSNAU) Group.
 \end{itemize}
+\item \textbf{University of Southern California, 2018--2021} Department of Preventive Medicine\\\emph{Research Programmer II}.
+\begin{itemize}
+	\item[-] Provide technical support on software development, HPC, R, and C++, including training sessions to staff and students.
+	\item[-] Write scientific papers on statistics and present them at conferences.
+	\item[-] Designed and taught the course "Intro to Health Data Science" (graduate level).
+	\item[-] Contributed to research grants (NIH and DoD).
+\end{itemize}
+\item \textbf{University of Southern California, 2015--2018} Department of Preventive Medicine\\\emph{Programmer Analyst II}. 
+\begin{itemize}
+	\item[-] Wrote R package for Social Network Analysis.
+	\item[-] Organized local conferences on Network Science.
+	\item[-] Wrote scientific papers on network science and presented them at conferences.
+	\item[-] Designed and led workshops on R and Social Network Analysis.
+\end{itemize}
+Statistical computing support for the Department of Preventive Medicine.
+\item \textbf{Chilean Pension Supervisor, August 2011-- August 2014} Research Division\\
+\emph{Research Analyst}
+\begin{itemize}
+	\item[-] Wrote papers and statistical reports about the Chilean unemployment insurance system.
+	\item[-] Managed administrative data (\textit{e.g.}, social security) and created representative samples for researchers.
+	\item[-] Designed and implemented pipeline for simulation and forcasting of the unemployment insurance government funds. Reports were distributed to the Chilean Congress.
+\end{itemize}
+% \item \textbf{Universidad Adolfo Ib\'a\~nez, January 2011--June 2012.} School of Government \emph{Adjunct Professor}.
+% Taught Introductory courses of Economics, Microeconomics and Statistical computing with Stata.
+\end{itemize}
+
+\newgeometry{left=1.3cm, right = 1.3cm, top = 1.3cm, bottom = 1.3cm}
 
 \section*{\color{\darkorange}{Software {\small (selected)}}}
 \vspace{-.25cm}
@@ -241,31 +271,12 @@ Taught Introductory courses of Economics, Microeconomics and Statistical computi
 %\item {\bfseries George G.} {\bfseries Vega Yon}. \textit{barry: your to-go motif accountant} (2020). C++ library version 0.0-1. {\small URL}: \url{https://github.com/USCbiostats/barry}.  
 \end{enumerate}
 
+\nocite{yon2019exponential,VegaYon2019c,VegaYon2019a,vegayon2020aphylo,vegayonPowerMulticollinearitySmall2023,vegayonDiscreteExponentialFamilyModels2022} %VegaYon2019b
 \section*{\color{\darkorange}{Academic Publications {\small (selected)}}}
 \vspace{-.25cm}
 
-\nocite{yon2019exponential,VegaYon2019c,VegaYon2019a,vegayon2020aphylo,vegayonPowerMulticollinearitySmall2023,vegayonDiscreteExponentialFamilyModels2022} %VegaYon2019b
-
 \printbibliography[title=\vskip-20pt,omitnumbers=true]
 
-
-
-%\subsection*{Conferences and Presentations}
-%
-%\begin{itemize}
-%\item ``PARALLEL: Stata module for parallel computing'', presented at the {\it Stata Conference} (2013), New Orleans, USA.
-%\item ``Introducing {\tt rgexf} and how to develop your own R-package'', presetented at the {\it Group of R users in Chile} (2013), Santiago, Chile.
-%\item ``Introducing PARALLEL: Stata Module for Parallel Computing'', presented at the {\it Reuni\'on Anual de la Sociedad de Economistas de Chile} (2012), Vi\~na del Mar, Chile.
-%\end{itemize}
-
-%\subsection*{Press and others}
-%
-% \begin{itemize}
-%\item
-%\href{https://gephi.wordpress.com/2013/02/12/rgexf-an-r-library-to-work-with-gexf-graph-files/}{``rgexf: An R library to work with GEXF graph files''} in {\it Gephi Blog}, published in february 12, 2013.
-%\item \href{http://www.elmostrador.cl/opinion/2012/04/04/aborto-en-twitter-un-debate-a-medias/}{``Aborto en Twitter: un debate a medias''} in {\it El Mostrador}, published in april 4, 2012.
-%\item \href{http://www.uai.cl/200911165701/columna-de-opinion/columnas-opinion/reinventar-la-ciudadania-la-otra-campana-que-obama-esta-ganando}{``Reinventar la ciudadanía, la otra campaña que Obama está ganando''} in {\it El Mostrador}, published in november 10, 2009.
-%\end{itemize}
 
 \section*{\color{\darkorange}{Honors and Professional Achievements}}
 \vspace{-.25cm}
