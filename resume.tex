@@ -21,6 +21,9 @@
 \renewcommand{\bf}{\bfseries\color{\myorange}}
 \renewcommand{\textbf}[1]{{\bfseries\color{\myorange}#1}}
 
+% Function for highlighting text
+\newcommand{\hl}[1]{{\color{darkgray}{\bfseries{}#1}}}
+
 \usepackage{geometry}
 \usepackage[minbibnames=4,maxbibnames=4,sorting=ydnt,date=comp,isbn=false,doi=false]{biblatex}
 \addbibresource{papers.bib}
@@ -76,7 +79,9 @@
 \usepackage[default,oldstyle,scale=0.95]{opensans}
 \usepackage[T1]{fontenc}
 
-
+% Reduce spacing 
+\usepackage{setspace}
+\setstretch{0.95}
 
 % Set your name here
 \def\name{George G. Vega Yon, Ph.D.}
@@ -100,7 +105,7 @@
 %  body={6.5in, 9in},
   left=1cm,
   top=1cm,
-  right=5cm,
+  right=4.5cm,
   bottom=1cm
 }
 
@@ -153,7 +158,7 @@
 \begin{document}
 	
 \begin{tikzpicture}[remember picture, overlay]
-	\node[anchor=north east, inner sep=30pt] at (current page.north east) {\includegraphics[width=0.4\textwidth]{fig/ukfaculty.pdf}};
+	\node[anchor=north east, inner sep=30pt] at (current page.north east) {\includegraphics[width=0.35\textwidth]{fig/ukfaculty.pdf}};
 \end{tikzpicture}
 
 % embed a pdf page
@@ -233,42 +238,43 @@
 {\bf BS. in Business Administration}, Universidad Adolfo Ib\'a\~nez (2011)
 \end{itemize}
 
-\vspace{-.5cm}
+\vspace{-.6cm}
 \section*{\color{\darkorange}{Professional Experience}}
-\vspace{-.25cm}
+\vspace{-.3cm}
 
 \begin{itemize}
 \item \textbf{University of Utah, November 2021--Present} Department of Internal Medicine\\
 \emph{Research Assistant Professor in Epidemiology}\\
 \emph{Adjunct Assistant Professor in Population Health Sciences}. 
 \begin{itemize}
-	\item[-] Research areas: Mechanistic ML, Network Science, Computational Epidemiology, Phylogenetics, Statistical Computing.
-	\item[-] Managed group of research assistants (staff and graduate students,) leading to published papers, software, and conference talks.
-	\item[-] Taught and designed first course on HPC using R and C++ (graduate level).
-	\item[-] Founder of the "Network Science and Social Network Analysis at the U" (NetSNAU) Group.
-	\item[-] Contributed to research grants (CDC and VA,) helping to secure over 1 MM USD in funding.
-	\item[-] Core faculty member of the Utah Center for Data Science.
+	\item[-] \hl{Research} areas: Mechanistic ML, Network Science, Computational Epidemiology, Phylogenetics, Statistical Computing.
+	\item[-] \hl{Managed} group of research assistants (staff and graduate students,) leading to published papers, software, and conference talks.
+	\item[-] \hl{Taught} and designed first course on HPC using R and C++ (graduate level).
+	\item[-] \hl{Founder} of the "Network Science and Social Network Analysis at the U" (NetSNAU) Group.
+	\item[-] \hl{Contributed} to research grants (CDC and VA,) helping to secure over \hl{1 MM USD in funding}.
+	\item[-] Core faculty member of the \hl{"Utah Center for Data Science"}.
 \end{itemize}
 \item \textbf{University of Southern California, 2018--2021} Department of Preventive Medicine\\\emph{Research Programmer II}.
 \begin{itemize}
-	\item[-] Provide technical support on software development (R packages), HPC, R, and C++, including training sessions to staff and students.
-	\item[-] Write scientific papers on network science, statistics, and phylogenetics and present them at conferences.
-	\item[-] Designed and taught the course "Intro to Health Data Science" (graduate level).
-	\item[-] Contributed to research grants (NIH and DoD,) helping to secure over 10 MM USD in funding.
+	\item[-] Provide technical support on \hl{software development} (R packages), HPC, R, and C++, including training sessions to staff and students.
+	\item[-] \hl{Write} scientific papers on network science, statistics, and phylogenetics and present them at conferences.
+	\item[-] \hl{Designed} and taught the course "Intro to Health Data Science" (graduate level).
+	\item[-] Contributed to \hl{research grants} (NIH and DoD,) helping to secure over \hl{10 MM USD in funding}.
 \end{itemize}
 \item \textbf{University of Southern California, 2015--2018} Department of Preventive Medicine\\\emph{Programmer Analyst II}. 
 \begin{itemize}
 	% \item[-] Wrote R package for Social Network Analysis.
-	\item[-] Organized local conferences on Network Science.
-	\item[-] Wrote scientific papers and software on network science and presented them at conferences.
-	\item[-] Designed and led workshops on R and Social Network Analysis.
+	\item[-] \hl{Organized} local conferences on Network Science.
+	\item[-] \hl{Founder} of the "R Bookcamp for Statistical Computing." 
+	\item[-] \hl{Wrote} scientific papers and software on network science and presented them at conferences.
+	\item[-] Designed and \hl{led workshops} on R and Social Network Analysis.
 \end{itemize}
 \item \textbf{Chilean Pension Supervisor, August 2011-- August 2014} Research Division\\
 \emph{Research Analyst}
 \begin{itemize}
-	\item[-] Wrote papers and statistical reports about the Chilean unemployment insurance system.
-	\item[-] Managed administrative data (\textit{e.g.}, social security) and created representative samples for researchers.
-	\item[-] Designed and implemented pipeline for simulation and forcasting of the unemployment insurance government funds. Reports were distributed to the Chilean Congress.
+	\item[-] Wrote papers and automatize \hl{statistical reports} about the Chilean unemployment insurance system.
+	\item[-] \hl{Managed administrative data} (\textit{e.g.}, social security) and created representative samples for researchers.
+	\item[-] Designed and implemented \hl{pipeline for simulation and forcasting} of the unemployment insurance government funds. Reports were distributed to the Chilean Congress.
 \end{itemize}
 % \item \textbf{Universidad Adolfo Ib\'a\~nez, January 2011--June 2012.} School of Government \emph{Adjunct Professor}.
 % Taught Introductory courses of Economics, Microeconomics and Statistical computing with Stata.
