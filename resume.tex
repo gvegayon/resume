@@ -99,9 +99,9 @@
 \geometry{
 %  body={6.5in, 9in},
   left=1cm,
-  top=1.3cm,
-  right=5.5cm,
-  bottom=1.3cm
+  top=1cm,
+  right=5cm,
+  bottom=1cm
 }
 
 % Not justified text
@@ -148,11 +148,12 @@
 \usepackage{array}
 
 \usepackage{tikz}
+\usetikzlibrary{positioning}
 
 \begin{document}
 	
 \begin{tikzpicture}[remember picture, overlay]
-	\node[anchor=north east, inner sep=30pt] at (current page.north east) {\includegraphics[width=0.5\textwidth]{fig/ukfaculty.pdf}};
+	\node[anchor=north east, inner sep=30pt] at (current page.north east) {\includegraphics[width=0.4\textwidth]{fig/ukfaculty.pdf}};
 \end{tikzpicture}
 
 % embed a pdf page
@@ -160,20 +161,36 @@
 
 
 \begin{tikzpicture}[remember picture, overlay]
-	\node[anchor=east, inner sep=20pt] at (current page.east) {%
+	\node[anchor=north east, inner sep=80pt] (A) at (current page.north east) {};%
+	\node[below=5pt of A, inner sep=20pt] (B) { %at (current page.east) {%
 	% \includepdf[pages={1}]{fig/hexlogos.pdf} %
-	\href[]{https://github.com/gvegayon}{\includegraphics[page=1,width=0.35\textwidth]{fig/hexlogos.pdf}}%
+	\href[]{https://github.com/gvegayon}{\includegraphics[width=0.25\textwidth]{fig/hexlogos.pdf}
+	}};
+	% Adding a node with text right below the previous node
+	\node[below=20pt of B] {%
+	\begin{minipage}{0.25\textwidth}
+		\small
+		\raggedleft \color{darkgray}
+		\textbf{Technologies} R, C++, \LaTeX, SQL, Python, XML, regex, Stata, AWS, Gephi, Pajek, Mathematica, Git, Docker, Visual Studio Code, tensorflow, continuous integration, Slurm, Unix, Jira.
+		
+		\bigskip
+
+		% \textbf{Skills} Statistical Analysis, Simulation, Data Visualization% 
+		% 	}
+	\end{minipage}
 	};
-	
 \end{tikzpicture}
 
-
+% \begin{tikzpicture}
+% 	\node[anchor=east, inner sep=20pt] at (current page.east) {%
+% 	
+% \end{tikzpicture}
 	% % Place name at left
 	% \hfill \includegraphics[width=.4\linewidth]{fig/ukfaculty.pdf}
-	\vspace{-2cm}
-	\part*{\color{darkgray}{\name}} 
+	\vspace{-1.75cm}
+	\part*{\color{darkgray}{\name} } 
 	
-	\vspace{-.25cm}
+	\vspace{-.4cm}
 	\color{darkgray}{\textit{Data Science, Statistical Computing, \& Complex Systems Modeling}}
 	\bigskip
 
@@ -201,7 +218,7 @@
   \end{tabular}
 \end{minipage}
 
-
+\vspace{-.25cm}
 \section*{\color{\darkorange}{Education}}
 \vspace{-.25cm}
 
@@ -225,26 +242,27 @@
 \emph{Research Assistant Professor in Epidemiology}\\
 \emph{Adjunct Assistant Professor in Population Health Sciences}. 
 \begin{itemize}
-	\item[-] Research areas: Mechanistic Machine Learning, Social Networks, Computational Epidemiology, Phylogenetics, Statistical Computing.
-	\item[-] Managed group of research assistants (staff and graduate students).
-	\item[-] Taught course on HPC using R and C++ (graduate level).
-	\item[-] Lead the "Network Science and Social Network Analysis at the U" (NetSNAU) Group.
+	\item[-] Research areas: Mechanistic ML, Network Science, Computational Epidemiology, Phylogenetics, Statistical Computing.
+	\item[-] Managed group of research assistants (staff and graduate students,) leading to published papers, software, and conference talks.
+	\item[-] Taught and designed first course on HPC using R and C++ (graduate level).
+	\item[-] Founder of the "Network Science and Social Network Analysis at the U" (NetSNAU) Group.
+	\item[-] Contributed to research grants (CDC and VA,) helping to secure over 1 MM USD in funding.
+	\item[-] Core faculty member of the Utah Center for Data Science.
 \end{itemize}
 \item \textbf{University of Southern California, 2018--2021} Department of Preventive Medicine\\\emph{Research Programmer II}.
 \begin{itemize}
-	\item[-] Provide technical support on software development, HPC, R, and C++, including training sessions to staff and students.
-	\item[-] Write scientific papers on statistics and present them at conferences.
+	\item[-] Provide technical support on software development (R packages), HPC, R, and C++, including training sessions to staff and students.
+	\item[-] Write scientific papers on network science, statistics, and phylogenetics and present them at conferences.
 	\item[-] Designed and taught the course "Intro to Health Data Science" (graduate level).
-	\item[-] Contributed to research grants (NIH and DoD).
+	\item[-] Contributed to research grants (NIH and DoD,) helping to secure over 10 MM USD in funding.
 \end{itemize}
 \item \textbf{University of Southern California, 2015--2018} Department of Preventive Medicine\\\emph{Programmer Analyst II}. 
 \begin{itemize}
-	\item[-] Wrote R package for Social Network Analysis.
+	% \item[-] Wrote R package for Social Network Analysis.
 	\item[-] Organized local conferences on Network Science.
-	\item[-] Wrote scientific papers on network science and presented them at conferences.
+	\item[-] Wrote scientific papers and software on network science and presented them at conferences.
 	\item[-] Designed and led workshops on R and Social Network Analysis.
 \end{itemize}
-Statistical computing support for the Department of Preventive Medicine.
 \item \textbf{Chilean Pension Supervisor, August 2011-- August 2014} Research Division\\
 \emph{Research Analyst}
 \begin{itemize}
@@ -282,7 +300,6 @@ Statistical computing support for the Department of Preventive Medicine.
 \vspace{-.25cm}
 
 \begin{itemize}
-\item \textbf{Technologies} R, C++, \LaTeX, SQL, Python, XML, regex, Stata, AWS, Gephi, Pajek, Mathematica, Git, Docker, Visual Studio Code, tensorflow, continuous integration, Slurm, Unix.
 % \item \textbf{Book reviewer}: ``Microeconometrics and Matlab: An Introduction'', by Adams, Clarke and Quinn, Oxford University Press, 2015. ``Mastering Gephi Network Visualization'', by Ken Cherven, Packt Publishing, 2015. ``Network Graph Analysis and Visualization with Gephi'', by Ken Cherven, Packt Publishing, 2013.
 \item \textbf{Awards} Best paper, 72 ICA conference, 2022; Travel Grant, Society of Young Network Scientist, 2019; Fellowship, California Institute of Technology, 2014; Scholarship, Adolfo Ib\'a\~nes University, 2006.
 %\item \textbf{Book reviewer} ``Microeconometrics and MATLAB'', by Abi Adams, Damian Clarke \& Simon Quinn, Oxford University Press, (forthcoming 2015).
