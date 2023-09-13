@@ -3,7 +3,10 @@
 all:
 	pdflatex --enable-write18 cv.tex && evince cv.pdf &
 docx:
-	pandoc --bibliography=papers.bib -f latex -t docx resume.tex -o resume.docx
+	pandoc --bibliography=papers.bib,software.bib -f latex -t docx resume.tex -o resume.docx
+
+cvdocx:
+	pandoc --bibliography=papers.bib,software.bib -f latex -t docx cv.tex -o cv.docx
 
 update:
 	rsync -av ../talks/*.bib .
