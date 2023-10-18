@@ -8,7 +8,7 @@
 % this notice and the above URL in the source code if you choose to
 % redistribute this file.
 
-\documentclass[letterpaper, 11pt]{article}
+\documentclass[letterpaper, 10pt]{article}
 
 \usepackage{hyperref}
 \usepackage{geometry}
@@ -110,9 +110,10 @@
 
 \geometry{
 %  body={6.5in, 9in},
-  left=1in,
+% margin=.8in
+  left=.8in,
   top=1in,
-  right=1in,
+  right=.8in,
   bottom=1in
 }
 
@@ -128,31 +129,6 @@
 \fancyhead[R]{\small\thepage}
 \thispagestyle{empty}
 
-% Custom section fonts
-%\usepackage{sectsty}
-%\sectionfont{\sffamily\mdseries\Large}
-%\subsectionfont{\sffamily\mdseries\itshape\large}
-
-% Other possible font commands include:
-% rmfamily
-% \ttfamily for teletype,
-% \sffamily for sans serif,
-% \bfseries for bold,
-% \scshape for small caps,
-% \normalsize, \large, \Large, \LARGE sizes.
-
-% Don't indent paragraphs.
-\setlength\parindent{0em}
-
-% Make lists without bullets
-%\renewenvironment{itemize}{
-%  \begin{list}{}{
-%    \setlength{\leftmargin}{0.45cm}
-%  }
-%}{
-%  \end{list}
-%}
-
 % Para poder poner comandos genericos en tablas (en el inicio del argumento)
 \usepackage{array}
 
@@ -164,10 +140,7 @@
 % Place name at left
 \hfill \includegraphics[width=.4\linewidth]{fig/ukfaculty.pdf}\vspace{-6cm}
 \part*{\color{darkgray}{\name}}
-% Alternatively, print name centered and bold:
-%\centerline{\huge \bf \name}
 
-%\vspace{0.25in}
 
 \begin{minipage}{0.50\linewidth}
   \begin{tabular}{>{}p{.2\linewidth}p{.79\linewidth}}
@@ -187,15 +160,15 @@
 
 \noindent 
 {\bf Ph.D. in Biostatistics (with a concentration in Statistical Computing)}\hfill 2020\\
-University of Southern California, USA\\
-Dissertation title: \emph{``Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems''}\vspace{.5cm}
+University of Southern California, USA.\\
+Dissertation title:\\ \hspace*{.5cm}\emph{``Essays on Bioinformatics and Social Network Analysis:\\\hspace*{.75cm}Statistical and Computational Methods for Complex Systems.''}\vspace{.5cm}
 
 \noindent {\bf M.Sc. in Social Sciences (with a concentration in Economics)}\hfill 2016\\
-California Institute of Technology, USA\vspace{.5cm}
+California Institute of Technology, USA.\vspace{.5cm}
 
-\noindent {\bf Master in Economics and Public Policy}\hfill 2011\\Universidad Adolfo Ib\'a\~nez, Chile \vspace{.5cm}
+\noindent {\bf Master in Economics and Public Policy}\hfill 2011\\Universidad Adolfo Ib\'a\~nez, Chile. \vspace{.5cm}
 
-\noindent {\bf BS. in Business Administration} (with a minor in Political Science) \hfill 2011\\Universidad Adolfo Ib\'a\~nez, Chile
+\noindent {\bf BS. in Business Administration} (with a minor in Political Science) \hfill 2011\\Universidad Adolfo Ib\'a\~nez, Chile.
 %\end{itemize}
 
 \section*{Awards}
@@ -215,26 +188,30 @@ California Institute of Technology, USA\vspace{.5cm}
 Social Networks and Complex Systems\\
 Statistical Computing\\
 Scientific Software Development \\
-Non-parametric Statistics\\
+Mechanistic Machine Learning\\
 Statistical Methods Development
 
-\section*{Professional Experience} 
+\section*{Academic and Professional Experience} 
 
 %\begin{itemize}
-\noindent {\bf University of Utah, November 2021--Present} Division of Epidemiology \emph{Research Assistant Professor}. Division of Population Health Sciences, \emph{Adjunct Assistant Professor}.\vspace{.5cm}
+\noindent \textbf{Research Assistant Professor}\hfill Nov 2021 -- Present\\Division of Epidemiology, University of Utah\vspace{.5cm}
 
-\noindent {\bf University of Southern California, 2015--November 2021} Department of Preventive Medicine \emph{Research Programmer}. As a senior research staff, I closely collaborate with researchers across the University. Besides providing technical support and educating community members on topics such as High-Performance-Computing and Statistical Computing--onsite workshops and presentations--, I actively contribute to grant-writing, leading research projects, and presenting to funding institutions--including NIH and DoD--and international conferences. Since August 2020, I also serve as a co-instructor for the Introduction to Data Science class of the Department's Master's in Health Data Science program.\vspace{.5cm}
+\noindent \textbf{Adjunct Assistant Professor}\hfill Jan 2023 -- Present\\Division of Population Health Sciences, University of Utah\vspace{.5cm}
 
-\noindent {\bf Chilean Pension Supervisor (Pension System Watchdog), August 2011-- August 2014} Research Division \emph{Analyst}. My main responsibilities were: Conducting statistical and econometric analysis of the Chilean unemployment insurance, developing scientific software to deal with big data, and serve as a bridge between the IT and Research divisions.\vspace{.5cm}
+\noindent \textbf{Research Programmer}\hfill Feb 2018 -- Nov 2021\\{Department of Preventive Medicine, University of Southern California}\vspace{.5cm}
 
-\noindent {\bf Nodos Chile Social Network Analysis Ltda., January 2012--January 2014} \emph{Partner}.
-Founding partner of one of the first applied SNA Consultancy Entrepreneurship in Chile.\vspace{.5cm}
+\noindent \textbf{Programmer Analyst}\hfill Oct 2015 -- Feb 2018\\Department of Preventive Medicine, University of Southern California.\vspace{.5cm}
 
-\noindent {\bf Universidad Adolfo Ib\'a\~nez, January 2011--June 2012.} School of Government \emph{Adjunct Professor}. Taught Introductory courses of Economics, Microeconomics and Statistical computing with Stata. \vspace{.5cm}
+\noindent \textbf{Graduate student researcher}\hfill Aug 2011 -- Oct 2015\\Division of Social Sciences, California Institute of Technology.\vspace{.5cm}
 
-\noindent {\bf Chilean Ministry of Social Planning, March 2011--December 2011.} Social Programs Monitoring \emph{Analyst}.
-Survey and Analysis of the Government social programs supply and supporting the Monitoring Division with the Open-Data Initiative.
-%\end{itemize}
+\noindent \textbf{Analyst}\hfill Aug 2011 -- Aug 2014\\
+Research Division, Chilean Pension Supervisor (Pension System Watchdog).\vspace{.5cm}
+
+\noindent \textbf{Founding partner}\hfill Jan 2012 -- Jan 2014\\
+Nodos Chile Social Network Analysis Ltda.\vspace{.5cm}
+
+\noindent \textbf{Adjunct Professor of Statistical Computing}\hfill Jan 2011 -- Jun 2012\\School of Government, Universidad Adolfo Ib\'a\~nez. 
+
 
 \section*{Peer Reviewed Publications}
 \nocite{*}
@@ -260,7 +237,7 @@ Survey and Analysis of the Government social programs supply and supporting the 
 
 %\pagebreak
 
-\section*{Conference Talks}
+\section*{Conference talks/workshops}
 
 \printbibliography[title=\vskip-20pt,keyword=conferencetalk, resetnumbers=true]
 
@@ -324,19 +301,40 @@ Co-instructor, PHS Ph.D. Program\vspace{.5cm}
 
 \section*{Mentoring/Advising}
 
-\noindent \textbf{Qualifying Exam chair and Member, Ph.D. Dissertation Committee Member (2022--Present),} Katherine Lawson Michod, University of Utah, Population Health Sciences, Clinical and Translational Epidemiology Ph.D. program.\vspace{.5cm}
+\noindent \textbf{Qualifying Exam chair and Member, Ph.D. Dissertation Committee Member (2022--Present),}\\ Katherine Lawson Michod, University of Utah, Population Health Sciences, Clinical and Translational Epidemiology Ph.D. program.\vspace{.5cm}
 
-\noindent \textbf{Ph.D. Dissertation Committee Member (2023--Present),} Eric Anto, University of Utah, Population Health Sciences, Biostatistics Ph.D. program.\vspace{.5cm}
+\noindent \textbf{Ph.D. Dissertation Committee Member (2023--Present),}\\ Eric Anto, University of Utah, Population Health Sciences, Biostatistics Ph.D. program.\vspace{.5cm}
 
-\noindent \textbf{Mentor, RA (Summer 2023),} Porter Bischoff, University of Utah + Utah Valley University, Summer Program for Undergraduate Research (SPUR), Network Visualization using R.\vspace{.5cm}
+\noindent \textbf{Mentor, RA (Summer 2023),}\\ Porter Bischoff, University of Utah + Utah Valley University, Summer Program for Undergraduate Research (SPUR), Network Visualization using R.\vspace{.5cm}
 
-\noindent \textbf{Supervisor, RA (2022--Present),} Derek Meyer, University of Utah, Population Health Science, Agent-Based Models for Epidemics.\vspace{.5cm}
+\noindent \textbf{Supervisor, RA, and M.Sc. Dissertation Committee Member (2022--Present)}\\ Derek Meyer, University of Utah, Population Health Science, Agent-Based Models for Epidemics.\vspace{.5cm}
 
-\noindent \textbf{Mentor, (2022--Present),} Jacqueline M. Kent-Marvik, University of Utah, Nursing School, Ph.D. Health Sciences, Network Science and Social Network Analysis.\vspace{.5cm}
+\noindent \textbf{Mentor, (2022--Present),}\\ Jacqueline M. Kent-Marvik, University of Utah, Nursing School, Ph.D. Health Sciences, Network Science and Social Network Analysis.\vspace{.5cm}
 
-\noindent \textbf{Mentor, (2022),} Luis Lopez, NIH, Postbac program, Exponential-Family Random Graph Models.
+\noindent \textbf{Mentor, (2022),}\\ Luis Lopez, NIH, Postbac program, Exponential-Family Random Graph Models.
 
+\section*{Grants}
 
+\noindent 5P01CA196569-08 (PIs: Gauderman, Siegmund)\hfill 07-01-2016 -- 08-31-2027\\
+National Cancer Institute (NCI)\hfill 0.6 calendar months/year\\
+\textbf{Statistical Methods for Integrative Genomics in Cancer}\\
+This program aims to develop novel statistical methods for integrating multi-omic data to address cancer etiology, prognosis, and treatment. The program has three synergetic projects, one using evolutionary models for annotating genes and their products (of which I am a Co-I). \\
+Role: Co-Investigator\\
+Total Award Amount (including indirect costs): \$ 12,894,663. \vspace{.5cm}
+
+\noindent HT94252310221 (PI: Kennedy)\hfill 07-01-2023 -- 30-06-2026\\
+U.S. Army Medical Research and Development Command (DoD)\hfill 1.8 calendar months/year\\
+\textbf{Phenotypes of Epilepsy Etiology and Drug Resistance (PEER)}\\
+The project aims to investigate the causes and workings of epilepsy by utilizing new data science methods. The grant will be utilized to analyze patterns in three ongoing and established studies, generating "risk scores" for epilepsy after a head injury, specifically among military personnel..\\
+Role: Co-Investigator\\
+Total Award Amount (including indirect costs): \$ 846,484. \vspace{.5cm}
+
+\noindent 5U01CK000675-01 (PI: Keegan)\hfill 09-30-2022 -- 09-29-2025\\
+National Center for Emerging and Zoonotic Infectious Diseases (NCEZID)\hfill 0.3 calendar months/year\\
+\textbf{TRANSMIT: Training Research Acumen in Students Modeling Infectious Threats}\\
+A fellowship program oriented to train students in using mathematical modeling and computational methods to study infectious diseases.\\
+Role: Co-Investigator\\
+Total Award Amount (including indirect costs): \$ 891,356. \vspace{.5cm}
 
 % \noindent \textbf{}
 % 
@@ -367,27 +365,29 @@ International Conference on Computational Social Science (2019--2021)\\
 SUNBELT Conference (2016)\vspace{.5cm}
 
 \noindent\textbf{Panelist/Discussant}\\
-``JASA A\&CS Special Invited Session: A Tale of Two Datasets -- Representativeness and Generalisability of Inference for Samples of Networks'', Joint Statistical Meetings (JSM), August 2023.\\\\
-``Social Network Diffusion of Individual Behavior Change Interventions Virtual Workshop'', National Institute on Aging Division of Behavioral and Social Research (NIA BSR), March 2022.\\
+
+\noindent ``Learning tips for your PhD from other researchers in the community''.\\ Early and Middle Career Researchers (EMCRs) on Social Networks workshops, October 2023.\\\\
+``JASA A\&CS Special Invited Session: A Tale of Two Datasets -- Representativeness and Generalisability of Inference for Samples of Networks.''\\ Joint Statistical Meetings (JSM), August 2023.\\\\
+``Social Network Diffusion of Individual Behavior Change Interventions Virtual Workshop.''\\ National Institute on Aging Division of Behavioral and Social Research (NIA BSR), March 2022.\\
 
 \noindent\textbf{Book Review}\\
-``Microeconometrics and Matlab: An Introduction'', by Adams, Clarke and Quinn, Oxford University Press, 2015.\\
 
-``Mastering Gephi Network Visualization'', by Ken Cherven, Packt Publishing, 2015.\\
-
+\noindent  ``Microeconometrics and Matlab: An Introduction'', by Adams, Clarke and Quinn, Oxford University Press, 2015.\\\\
+``Mastering Gephi Network Visualization'', by Ken Cherven, Packt Publishing, 2015.\\\\
 ``Network Graph Analysis and Visualization with Gephi'', by Ken Cherven, Packt Publishing, 2013.\vspace{.5cm}
 
 \noindent \textbf{Misc}\\
-Core member of the \href{https://datascience.utah.edu}{``University of Utah's Center for Data Science''} (2023--Present)\\
 
-Lead of \href{https://netsci.utah.edu}{``Network Science and Social Network Analysis at the U (NetSNAU)''} research group (2022--Present)\\
-
-Member of ``Center for Applied Network Analysis (CANA) at USC'' research group (2016--Present) \\
-
-Co-organizer of the \href{https://networkanalysis.usc.edu}{USC Networks Meeting} (2020, 2021)\\
-
-Founder of the (first) \href{https://www.meetup.com/useRchile/}{R Users Group in Chile (2013)}\\
-
+\noindent Core member of the \href{https://datascience.utah.edu}{``University of Utah's Center for Data Science''} (2023--Present)\\\\
+%
+Lead of \href{https://netsci.utah.edu}{``Network Science and Social Network Analysis at the U (NetSNAU)''} research group (2022--Present)\\\\
+%
+Member of ``Center for Applied Network Analysis (CANA) at USC'' research group (2016--Present) \\\\
+%
+Co-organizer of the \href{https://networkanalysis.usc.edu}{USC Networks Meeting} (2020, 2021)\\\\
+%
+Founder of the (first) \href{https://www.meetup.com/useRchile/}{R Users Group in Chile (2013)}\\\\
+%
 Co-organizer of the \href{https://socalr.org}{East LA R User Group (LAERUG)}.
 %\item \textbf{Honorable Mention} (Posters Sesion. Work: \emph{Introducing Parallel: Stata Module for Parallel Computing}) given by the Chilean Economics Society during its 2012 annual meetting.
 %\item \textbf{Honour Scholarship} given by Adolfo Ib\'a\~nez University for completing undergrad and graduate studies (2006-2010).
