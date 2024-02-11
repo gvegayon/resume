@@ -16,3 +16,5 @@ software: software.R
 
 .PHONY: docx all
 
+combine:
+	pdftk resume.pdf cv.pdf cat output cv-resume.pdf
