@@ -9,7 +9,7 @@ cvdocx:
 	pandoc --bibliography=papers.bib,software.bib -f latex -t docx cv.tex -o cv.docx
 
 update:
-	rsync -av ../talks/*.bib .
+	rsync -av ../talks/talks/*.bib .
 
 software: software.R
 	R CMD BATCH --vanilla software.R &
