@@ -1,0 +1,17 @@
+FROM rocker/tidyverse:4.5.1
+
+RUN install2.r --error languageserver
+
+# Installing quarto
+RUN Rscript --vanilla -e 'tinytex::install_tinytex()'
+
+ENV PATH="/root/.TinyTeX/bin/aarch64-linux:${PATH}"
+
+RUN apt-get update && apt-get install -y --no-install-recommends vim
+
+RUN tlmgr install biblatex opensans fontaxes enumitem setspace fancyhdr biber
+
+RUN install2.r --error bibtex rsvg && \
+    sudo apt-get install --no-install-recommends -y librsvg2-bin
+
+CMD ["bash"]

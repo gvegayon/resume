@@ -24,13 +24,14 @@ for (pkg in pkgs) {
     destfile = pkg_svg
   )
   
-  system(
-    sprintf(
-      "inkscape %s --export-area-drawing --batch-process --export-type=pdf --export-filename=%s",
-      pkg_svg,
-      pkg_pdf
-      )
-    )
+  rsvg::rsvg_pdf(pkg_svg, pkg_pdf)
+  # system(
+  #   sprintf(
+  #     "inkscape %s --export-area-drawing --batch-process --export-type=pdf --export-filename=%s",
+  #     pkg_svg,
+  #     pkg_pdf
+  #     )
+  #   )
 }
   
 

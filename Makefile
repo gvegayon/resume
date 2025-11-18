@@ -12,7 +12,7 @@ update:
 	rsync -av ../talks/talks/*.bib .
 
 software: software.R
-	R CMD BATCH --vanilla software.R &
+	R CMD BATCH --vanilla software.R software.Rout
 
 .PHONY: docx all
 
