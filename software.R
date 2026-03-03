@@ -12,7 +12,12 @@ pkgs <- c(
   "aphylo",
   "netplot",
   "epiworldR",
-  "defm"
+  "epiworldRShiny",
+  "defm",
+  "measles",
+  "barry",
+  "epiworldRcalibrate",
+  "multigroup.vaccine"
   )
 
 for (pkg in pkgs) {
