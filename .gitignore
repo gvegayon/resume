@@ -3,3 +3,5 @@
 *.out
 *.gz
 .Rproj.user
+# Generated bibliography typst files
+bib-*.typ

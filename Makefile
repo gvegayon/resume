@@ -1,12 +1,12 @@
-# sudo docker run --rm --net=host --env="DISPLAY" -v$(pwd):/app -w/app minidocks/inkscape:latest fig/cran-downloads-abcoptim.svg --export-area-drawing -o abcoptim.pdf
+all: bib
+	typst compile cv.typ cv.pdf
 
-all:
-	pdflatex --enable-write18 cv.tex && evince cv.pdf &
-docx:
-	pandoc --bibliography=papers.bib,software.bib -f latex -t docx resume.tex -o resume.docx
-
-cvdocx:
-	pandoc --bibliography=papers.bib,software.bib -f latex -t docx cv.tex -o cv.docx
+bib:
+	python3 bib2typst.py papers.bib --keyword published -o bib-published.typ
+	python3 bib2typst.py papers.bib --keyword wip -o bib-wip.typ
+	python3 bib2typst.py presentations-conference.bib --keyword conferencetalk -o bib-conferencetalk.typ
+	python3 bib2typst.py presentations-invited.bib --keyword invitedtalk -o bib-invitedtalk.typ
+	python3 bib2typst.py presentations-other.bib --keyword othertalk -o bib-othertalk.typ
 
 update:
 	rsync -av ../talks/talks/*.bib .
@@ -14,7 +14,7 @@ update:
 software: software.R
 	R CMD BATCH --vanilla software.R software.Rout
 
-.PHONY: docx all
+.PHONY: all bib
 
 combine:
 	pdftk resume.pdf cv.pdf cat output cv-resume.pdf

@@ -2,14 +2,13 @@ FROM rocker/tidyverse:4.5.1
 
 RUN install2.r --error languageserver
 
-# Installing quarto
-RUN Rscript --vanilla -e 'tinytex::install_tinytex()'
+# Installing typst
+RUN curl -fsSL https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz \
+    | tar xJ --strip-components=1 -C /usr/local/bin/
 
-ENV PATH="/root/.TinyTeX/bin/aarch64-linux:${PATH}"
+RUN apt-get update && apt-get install -y --no-install-recommends vim python3-pip
 
-RUN apt-get update && apt-get install -y --no-install-recommends vim
-
-RUN tlmgr install biblatex opensans fontaxes enumitem setspace fancyhdr biber
+RUN pip3 install --break-system-packages bibtexparser
 
 RUN install2.r --error bibtex rsvg && \
     sudo apt-get install --no-install-recommends -y librsvg2-bin
