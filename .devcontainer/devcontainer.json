@@ -14,7 +14,7 @@
 							"tianyishi.rmarkdown",
 							"ms-vscode.live-server",
 							"ritwickdey.LiveServer",
-							"james-yu.latex-workshop"
+							"nvarner.typst-lsp"
 					]
 			}
 	},

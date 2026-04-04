@@ -49,28 +49,28 @@ bib <- unclass(bib)
 bib <- lapply(bib, function(b) {
   b$author <- paste(gsub(
     "George( G.)? Vega( Yon)?|Vega( Yon)?, George( G.)?",
-    "\\\\textbf{George G.} \\\\textbf{Vega Yon}",
+    "#strong[George G.] #strong[Vega Yon]",
     b$author
     ), collapse = ", ")
   b
 })
 bib <- bib[order(as.integer(sapply(bib, "[[", "year")), decreasing = TRUE)]
-tmp <- "software.tex"
+tmp <- "software.typ"
 file.remove(tmp)
 for (n in names(bib)) {
   
-  # Figuiring out badge
-  if (file.exists(badge <- sprintf("fig/cran-downloads-%s.pdf", tolower(n))))
-    badge <- sprintf("\\\\\\includegraphics[width=2.5cm]{%s}", badge)
+  # Figuring out badge
+  if (file.exists(badge <- sprintf("fig/cran-downloads-%s.svg", tolower(n))))
+    badge <- sprintf("\\\\\n#image(\"%s\", width: 2.5cm)", badge)
   else
     badge <- ""
   
   cat(
     sprintf(
-      "\\item %s. \\textit{%s} (%s). %s. {\\small URL}: \\url{%s}. %s",
+      "+ %s. _%s_ (%s). %s. URL: #link(\"%s\") %s",
       bib[[n]]$author, bib[[n]]$title, bib[[n]]$year,
       bib[[n]]$note, bib[[n]]$url, badge),
-    "\n",
+    "\n\n",
     file = tmp,
     append = TRUE
     )
