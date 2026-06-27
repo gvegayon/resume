@@ -17,17 +17,25 @@ pkgs <- c(
   "measles",
   "barry",
   "epiworldRcalibrate",
-  "multigroup.vaccine"
+  "multigroup.vaccine",
+  "imaginarycss"
   )
 
 for (pkg in pkgs) {
   pkg_svg <- sprintf("fig/cran-downloads-%s.svg", tolower(pkg))
   pkg_pdf <- sprintf("fig/cran-downloads-%s.pdf", tolower(pkg))
   
-  download.file(
-    url = sprintf("http://cranlogs.r-pkg.org/badges/grand-total/%s", pkg),
-    destfile = pkg_svg
-  )
+  ans <- tryCatch({
+      download.file(
+      url = sprintf("http://cranlogs.r-pkg.org/badges/grand-total/%s", pkg),
+      destfile = pkg_svg
+    )
+  }, error = \(e) e)
+
+  if (inherits(ans, "error")) {
+    message("The package ", pkg, " failed to download.")
+    next
+  }
   
   rsvg::rsvg_pdf(pkg_svg, pkg_pdf)
   # system(
